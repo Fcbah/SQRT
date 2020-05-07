@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Compare Square root";
+}
+
+<div>
+    <h1>Compare Square root of two numbers</h1>
+    @{
+    if(ViewBag.Result != null){
+    
+    <p>@ViewBag.Result</p>
+
+    }else{
+        <p>Please Enter Two Numbers whose Square root you want to be compared</p>
+    }
+    }
+    <form asp-controller="sqrt" asp-action="CompareSqrt">
+        <input type="number" name = "first_number" placeholder="Enter First Number"/>
+        <input type="number" name = "second_number" placeholder="Enter Second Number"/>
+        <button type="submit">Compare Square Root</button>
+    </form>
+</div>
